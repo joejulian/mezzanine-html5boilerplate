@@ -33,8 +33,8 @@
 
 {% block breadcrumb_menu %}
 <ul>
-    <li><a href="{% url home %}">{% trans "Home" %}</a> &gt;</li>
-    <li><a href="{% url blog_post_list %}">{{ blog_page.title }}</a> &gt;</li>
+    <li><a href="{% url "home" %}">{% trans "Home" %}</a> &gt;</li>
+    <li><a href="{% url "blog_post_list" %}">{{ blog_page.title }}</a> &gt;</li>
     <li>{{ blog_post.title }}</li>
 </ul><br />
 {% endblock %}
@@ -46,7 +46,7 @@
             {% trans "Posted by" %}
             <strong>
                 {% with blog_post.user as author %}
-                <a href="{% url blog_post_list_author author %}"
+                <a href="{% url "blog_post_list_author" author %}"
                     >{{ author.get_full_name|default:author.username }}</a>
                 {% endwith %}
             </strong>
@@ -71,7 +71,7 @@
         {% trans "Tags" %}: 
         <ul>
             {% for tag in tags %}
-            <li><a href="{% url blog_post_list_tag tag.slug %}" 
+            <li><a href="{% url "blog_post_list_tag" tag.slug %}" 
                 class="tag-weight-{{ tag.weight }}">{{ tag }}</a></li>
             {% endfor %}
         </ul>

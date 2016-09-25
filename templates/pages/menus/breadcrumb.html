@@ -6,7 +6,7 @@
 
     {% if page.is_primary and forloop.first %}
     <ul>
-    <li><a href="{% url home %}">{% trans "Home" %}</a> &gt; </li>
+    <li><a href="{% url "home" %}">{% trans "Home" %}</a> &gt; </li>
     {% endif %}
     
     {% if page.is_current_or_ascendant %}
@@ -14,7 +14,7 @@
         {% if page.is_current %}
         {{ page.title }}
         {% else %}
-        <a href="{% url page page.slug %}">{{ page.title }}</a> &gt;
+        <a href="{% url "page" page.slug %}">{{ page.title }}</a> &gt;
         {% endif %}
     </li>
     {% page_menu page %}

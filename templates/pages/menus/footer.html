@@ -12,7 +12,7 @@
 
     {% if page.in_footer %}
     <li {% if page.is_current_or_ascendant %}class="active"{% endif %}>
-        <a href="{% url page page.slug %}">{{ page.title }}</a></li>
+        <a href="{% url "page" page.slug %}">{{ page.title }}</a></li>
     {% endif %}
 
     {% page_menu page %}

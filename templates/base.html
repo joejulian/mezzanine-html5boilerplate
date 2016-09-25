@@ -21,8 +21,8 @@
     <!--  Mobile viewport optimized: j.mp/bplateviewport -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="alternate" type="application/rss+xml" title="RSS" href="{% url blog_post_feed "rss" %}">
-    <link rel="alternate" type="application/atom+xml" title="Atom" href="{% url blog_post_feed "atom" %}">
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="{% url "blog_post_feed" "rss" %}">
+    <link rel="alternate" type="application/atom+xml" title="Atom" href="{% url "blog_post_feed" "atom" %}">
 
     <!-- Place favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
     <link rel="shortcut icon" href="{{ MEDIA_URL }}favicon.ico">
@@ -77,7 +77,7 @@
             <p class="mezzanine">
                 {% trans "Powered by" %} 
                 <a href="http://mezzanine.jupo.org" target="_blank">Mezzanine</a><br />
-                <a href="{% url set_device "mobile" %}?next={{ request.path }}">{% trans "View Mobile Site." %}</a>
+                <a href="{% url "set_device" "mobile" %}?next={{ request.path }}">{% trans "View Mobile Site." %}</a>
             </p>
         </footer>
 
