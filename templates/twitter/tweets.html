@@ -10,14 +10,14 @@
     <li>
 
         <img src="{{ tweet.profile_image_url }}"><a
-            href="http://twitter.com/{{ tweet.user_name }}"
+            href="//twitter.com/{{ tweet.user_name }}"
             >{{ tweet.user_name }}</a>
             {% ifnotequal tweet.user_name tweet.full_name %}<span class="name">{{ tweet.full_name }}</span>{% endifnotequal %}
 
         {% if tweet.is_retweet %}
         <p><span class="recycle">&#x267B;</span>
         <img class="retweet" src="{{ tweet.retweeter_profile_image_url }}"><a
-            href="http://twitter.com/{{ tweet.retweeter_user_name }}"
+            href="//twitter.com/{{ tweet.retweeter_user_name }}"
             >{{ tweet.retweeter_full_name }}</a></p>
         {% endif %}
 
