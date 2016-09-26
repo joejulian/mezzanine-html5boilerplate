@@ -6,7 +6,7 @@
 
 <!-- Grab Google CDN's jQuery. fall back to local if necessary -->
 
-<script src="{{ settings.CONTENT_MEDIA_URL }}js/jquery-1.4.4.min.js"></script>
+<script src="{{ settings.STATIC_URL }}js/jquery-1.4.4.min.js"></script>
 {% comment %}
 <script type="text/javascript">
     $(function(){
@@ -23,21 +23,21 @@
 
 <!-- scripts concatenated and minified via ant build script-->
 {% comment %}
-<script src="{{ MEDIA_URL }}js/plugins.js"></script>
-<script src="{{ MEDIA_URL }}js/script.js"></script>
+<script src="{{ settings.STATIC_URL }}js/plugins.js"></script>
+<script src="{{ settings.STATIC_URL }}js/script.js"></script>
 {% endcomment %}
 <!-- end concatenated and minified scripts-->
 
 
 <!--[if lt IE 7 ]>
-  <script src="{{ MEDIA_URL }}js/libs/dd_belatedpng.js"></script>
+  <script src="{{ settings.STATIC_URL }}js/libs/dd_belatedpng.js"></script>
   <script> DD_belatedPNG.fix('img, .png_bg'); //fix any <img> or .png_bg background-images </script>
 <![endif]-->
 
 {% comment %}
 <!-- yui profiler and profileviewer - remove for production -->
-<script src="{{ MEDIA_URL }}js/profiling/yahoo-profiling.min.js"></script>
-<script src="{{ MEDIA_URL }}js/profiling/config.js"></script>
+<script src="{{ settings.STATIC_URL }}js/profiling/yahoo-profiling.min.js"></script>
+<script src="{{ settings.STATIC_URL }}js/profiling/config.js"></script>
 <!-- end profiling code -->
 {% endcomment %}
 

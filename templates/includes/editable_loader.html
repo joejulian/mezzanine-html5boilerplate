@@ -187,12 +187,12 @@
 <script>
 if (typeof $ == 'undefined') {
     document.write('<scr' + 
-        'ipt src="{{ settings.CONTENT_MEDIA_URL }}js/jquery-1.4.4.min.js"></scr' + 
+        'ipt src="{{ settings.STATIC_URL }}js/jquery-1.4.4.min.js"></scr' + 
         'ipt>');
 }
 </script>
-<script src="{{ settings.CONTENT_MEDIA_URL }}js/jquery.tools.js"></script>
-<script src="{{ settings.CONTENT_MEDIA_URL }}js/jquery.form.js"></script>
+<script src="{{ settings.STATIC_URL }}js/jquery.tools.js"></script>
+<script src="{{ settings.STATIC_URL }}js/jquery.form.js"></script>
 <script>
 
 $(function($) {
